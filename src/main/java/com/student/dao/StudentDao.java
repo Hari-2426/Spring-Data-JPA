@@ -12,48 +12,48 @@ import jakarta.persistence.Table;
 public class StudentDao {
 	
 	@Id
-	private int sid;
-	private String sname;
-	private String standard;
-	private int smarks;
-	public int getSid() {
-		return sid;
+	private int studentId;
+	private String studentName;
+	private int studentMarks;
+	private String studentDept;
+	public int getStudentId() {
+		return studentId;
 	}
-	public void setSid(int sid) {
-		this.sid = sid;
+	public void setStudentId(int studentId) {
+		this.studentId = studentId;
 	}
-	public String getSname() {
-		return sname;
+	public String getStudentName() {
+		return studentName;
 	}
-	public void setSname(String sname) {
-		this.sname = sname;
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
 	}
-	public String getStandard() {
-		return standard;
+	public int getStudentMarks() {
+		return studentMarks;
 	}
-	public void setStandard(String standard) {
-		this.standard = standard;
+	public void setStudentMarks(int studentMarks) {
+		this.studentMarks = studentMarks;
 	}
-	public int getSmarks() {
-		return smarks;
+	public String getStudentDept() {
+		return studentDept;
 	}
-	public void setSmarks(int smarks) {
-		this.smarks = smarks;
+	public void setStudentDept(String studentDept) {
+		this.studentDept = studentDept;
 	}
-	@Override
-	public String toString() {
-		return "StudentRepository [sid=" + sid + ", sname=" + sname + ", standard=" + standard + ", smarks=" + smarks
-				+ "]";
-	}
-	public StudentDao(int sid, String sname, String standard, int smarks) {
+	public StudentDao(int studentId, String studentName, int studentMarks, String studentDept) {
 		super();
-		this.sid = sid;
-		this.sname = sname;
-		this.standard = standard;
-		this.smarks = smarks;
+		this.studentId = studentId;
+		this.studentName = studentName;
+		this.studentMarks = studentMarks;
+		this.studentDept = studentDept;
 	}
 	public StudentDao() {
 		super();
+	}
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentMarks=" + studentMarks
+				+ ", studentDept=" + studentDept + "]";
 	}
 	
 
